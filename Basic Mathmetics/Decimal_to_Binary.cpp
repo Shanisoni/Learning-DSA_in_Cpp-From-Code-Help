@@ -3,16 +3,19 @@
 using namespace  std;
 int main ()
 {
-//     int n ;
-//     cin >> n ;
-//     while(n>0){
-//         int a = n % 2 ;
-//         cout << a ; 
-//         n = n / 2 ;
+    // Method_1 
+    int n ;
+    cin >> n ;
+    while(n>0){
+        int a = n % 2 ;
+        cout << a ; 
+        n = n / 2 ;
       
-//     } 
-//  return 0 ;
+    } 
+ return 0 ;
 
+
+//  Method_2
 int n ;
 cin >> n ; 
 int binary = 0 ; 
