@@ -20,11 +20,11 @@ int i = 0 ;
  while( n > 0 ) {
     int bit = n & 1 ;
     binary = bit*pow(10, i++) + binary ;
-    cout << binary << endl ;
+   
     n = n >> 1 ; 
 
  }
-
+ cout << binary << endl ;
 
  return 0 ;
 }
