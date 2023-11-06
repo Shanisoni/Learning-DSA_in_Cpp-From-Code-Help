@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        button{
+            background-color: blue;
+            color: #fff;
+            font-size: 3rem;
+            padding: 10px 15px;
+            border-radius: 15px;
+            border: none;
+            font-weight: bold;
+            box-shadow: rgba(83, 79, 79, 0.8) 14px 7px;
+            cursor: pointer;
+            
+            
+        }
+        .btn-active{
+            transform:scale(.96);
+            background-color: black;
+            
+
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+
+        }
+        .loader{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 15px solid rgba(71, 71, 71, 0.304);
+            border-top-color:red;
+            animation: amit 1.5s linear infinite;
+        }
+        @keyframes amit {
+
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="B" class="btn" onclick="clickHandler()"> Explore Now </button>
+        <div class="loader"></div>
+    </div>
+
+</body>
+
+<script>
+    function clickHandler() {
+        const btn = document.getElementById("B");
+        const prevText = document.getElementById("B").innerHTML;
+        btn.classList.add("btn-active");
+
+        setTimeout(function () {
+            btn.innerHTML = "Shani Soni";
+            btn.style.color = "red";
+            btn.style.background = "black";
+            btn.classList.remove("btn-active");
+        }, 0);
+
+        setTimeout(function () {
+            btn.innerHTML = prevText;
+            btn.style.color = "#fff"; 
+            btn.style.background = "blue";
+
+        }, 300);
+    }
+</script>
+</html>
